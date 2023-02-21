@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{1B786515-6B8E-4209-A0FF-9AF00DDA9974}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.SimpleDashboard PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Model/DtoScreenOneData.cs">
+    <Files>
+      <File FileName="SimpleDashboard.csproj" />
+      <File FileName="DashboardHub.cs" Line="8" Column="4" />
+      <File FileName="IDashboardHub.cs" Line="6" Column="2" />
+      <File FileName="Program.cs" Line="18" Column="48" />
+      <File FileName="Model/ScreenOneData.cs" Line="5" Column="1" />
+      <File FileName="Managers/ScreenOneManager.cs" Line="11" Column="45" />
+      <File FileName="Interfaces/IScreenOneManager.cs" Line="6" Column="1" />
+      <File FileName="DashboardDataService.cs" Line="14" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SimpleDashboard" expanded="True">
+            <Node name="SimpleDashboard" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Managers" expanded="True" />
+              <Node name="Model" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

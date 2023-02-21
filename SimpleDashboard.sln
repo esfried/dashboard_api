@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDashboard", "SimpleDashboard.csproj", "{1B786515-6B8E-4209-A0FF-9AF00DDA9974}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B786515-6B8E-4209-A0FF-9AF00DDA9974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B786515-6B8E-4209-A0FF-9AF00DDA9974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B786515-6B8E-4209-A0FF-9AF00DDA9974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B786515-6B8E-4209-A0FF-9AF00DDA9974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB26B9CD-4EA3-4DD1-BC7A-B5C08202E4C6}
+	EndGlobalSection
+EndGlobal
