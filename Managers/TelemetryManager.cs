@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using NuGet.Packaging;
 
 public class TelemetryManager : ITelemetryManager
 {
@@ -6,25 +7,24 @@ public class TelemetryManager : ITelemetryManager
 
     public DtoTelemetryData GetData()
     {
-        result.ScreenNameXClientIds.Clear();
+        result.Clock = DateTime.Now.ToString();
+        result.Counter += 1;
+        result.Screens.Clear();
 
-        if (DashboardHub._clientScreens.Count > 0)
+        if (DashboardHub._clientInfo.Any())
         {
-            var groups = DashboardHub._clientScreens.GroupBy(pair => pair.Value);
+            var screens = DashboardHub._clientInfo.Select(x => x.Value.Request).Distinct();
 
-            foreach (var group in groups)
+            foreach (var screen in screens)
             {
-                var newItem = new DtoScreenNameXClientIds();
-                newItem.Request = group.Key;
-                
-                foreach (var pair in group)
-                    newItem.ClientIds.Add(pair.Key);
-                
-                result.ScreenNameXClientIds.Add(newItem);
+                var newItem = new DtoScreens();
+                newItem.Screen = screen;
+                newItem.ClientIds.AddRange(DashboardHub._clientInfo.Where(x=>x.Value.Request==screen).Select(x => x.Key));
+                result.Screens.Add(newItem);
             }
         }
         
-        result.ScreenNameXClientIds = result.ScreenNameXClientIds.OrderBy(x=>x.Request).ToList();
+        result.Screens = result.Screens.OrderBy(x=>x.Screen).ToList();
         return result;
     }
 }

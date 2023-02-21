@@ -4,7 +4,7 @@ public class ScreenThreeManager : IScreenThreeManager
      
     public DtoScreenThreeData GetData()
     {
-        result.Clock = $"Screen Three {DateTime.Now}";
+        result.Clock = DateTime.Now.ToString();
         result.Counter += 100;
         return result;
     }

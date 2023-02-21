@@ -1,24 +1,21 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{1B786515-6B8E-4209-A0FF-9AF00DDA9974}|http">
-  <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.SimpleDashboard PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/DashboardHub.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/DashboardDataService.cs">
     <Files>
-      <File FileName="Program.cs" />
-      <File FileName="Properties/launchSettings.json" />
-      <File FileName="Managers/TelemetryManager.cs" />
-      <File FileName="Services/DashboardDataService.cs" />
-      <File FileName="Services/DashboardHub.cs" Line="40" Column="2" />
+      <File FileName="Services/DashboardDataService.cs" Line="64" Column="22" />
+      <File FileName="Services/DashboardHub.cs" Line="41" Column="80" />
+      <File FileName="Managers/TelemetryManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SimpleDashboard" expanded="True">
             <Node name="SimpleDashboard" expanded="True">
-              <Node name="Managers" expanded="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Managers" expanded="True">
+                <Node name="ScreenOneManager.cs" selected="True" />
+              </Node>
               <Node name="Model" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
@@ -28,4 +25,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.SimpleDashboard PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

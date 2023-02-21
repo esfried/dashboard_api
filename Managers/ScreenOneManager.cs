@@ -3,7 +3,7 @@
     
     public DtoScreenOneData GetData()
     {
-        result.Clock = $"Screen One {DateTime.Now}";
+        result.Clock = DateTime.Now.ToString();
         return result;
     }
 }

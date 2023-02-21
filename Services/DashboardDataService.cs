@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using Microsoft.AspNetCore.SignalR;
 
 //-----------------------------------------------------------------------------------------
@@ -55,33 +56,86 @@ public class DashboardDataService : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            if (DashboardHub._clientScreens.Count > 0)
+            if (DashboardHub._clientInfo.Any())
             {
-                var items = _telemetryManager.GetData().ScreenNameXClientIds.ToList();
-              
-                foreach(var item in items) {
-                    Trace.WriteLine($"Sending data into {item.Request} at {item.ClientIds.Count} client(s)");
-                    
-                    var request = item.Request.ToString();
+                foreach (var item in DashboardHub._clientInfo)
+                {
+                    var request = item.Value.Request.ToString();
+                   // Trace.WriteLine($"{DateTime.Now.ToString()} Sending data to {item.Key} for {item.Value.Request} - {request}");
 
-                    switch(item.Request) {
-                        case HubRequestCommand.Request_For_Screen_One_Data:
-                            await _hubContext.Clients.Group(request).Response_For_Screen_One_Data(_screenOneManager.GetData());
-                            break;
-                       case HubRequestCommand.Request_For_Screen_Two_Data:
-                            await _hubContext.Clients.Group(request).Response_For_Screen_Two_Data(_screenTwoManager.GetData());
-                            break;
-                       case HubRequestCommand.Request_For_Screen_Three_Data:
-                            await _hubContext.Clients.Group(request).Response_For_Screen_Three_Data(_screenThreeManager.GetData());
-                            break;
-                       case HubRequestCommand.Request_For_Telemetry_Data:
-                            await _hubContext.Clients.Group(request).Response_For_Telemetry_Data(_telemetryManager.GetData());
-                            break;
+                    try
+                        {
+                        switch (item.Value.Request)
+                        {
+                            case HubRequestCommand.Request_For_Screen_One_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Screen_One_Data(_screenOneManager.GetData());
+                                break;
+                            case HubRequestCommand.Request_For_Screen_Two_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Screen_Two_Data(_screenTwoManager.GetData());
+                                break;
+                            case HubRequestCommand.Request_For_Screen_Three_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Screen_Three_Data(_screenThreeManager.GetData());
+                                break;
+                            case HubRequestCommand.Request_For_Telemetry_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Telemetry_Data(_telemetryManager.GetData());
+                                break;
+                        }
                     }
-                } 
+                    catch (Exception ex)
+                    {
+                        Trace.WriteLine(ex.Message);
+                    }
+                }
             }
 
+            await Task.Delay((int)System.TimeSpan.FromSeconds(0.1).TotalMilliseconds, stoppingToken); // aguarda 5 segundos
+
+            /*if (DashboardHub._clientScreens.Count > 0)
+            {
+                var items = _telemetryManager.GetData().ScreenNameXClientIds.ToList();
+                var _clientHeartbeatIds = DashboardHub._clientHeartbeats.Keys.ToList();
+
+                foreach (var item in items) {
+                    Trace.WriteLine($"{DateTime.Now.ToString()} Sending data to {item.Request} for {item.ClientIds.Count} client(s)");
+                    foreach (var client in item.ClientIds)
+                        Trace.WriteLine($"  Client: {client}");
+
+                    // Send only if the client sent ping
+                    if (!item.ClientIds.Intersect(_clientHeartbeatIds).Any())
+                    {
+                        Trace.WriteLine($"{DateTime.Now.ToString()} No heartbeats for {item.Request}");
+                        continue;
+                    }
+
+                    var request = item.Request.ToString();
+
+                    try
+                    {
+                        switch (item.Request)
+                        {
+                            case HubRequestCommand.Request_For_Screen_One_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Screen_One_Data(_screenOneManager.GetData());
+                                break;
+                            case HubRequestCommand.Request_For_Screen_Two_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Screen_Two_Data(_screenTwoManager.GetData());
+                                break;
+                            case HubRequestCommand.Request_For_Screen_Three_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Screen_Three_Data(_screenThreeManager.GetData());
+                                break;
+                            case HubRequestCommand.Request_For_Telemetry_Data:
+                                await _hubContext.Clients.Group(request).Response_For_Telemetry_Data(_telemetryManager.GetData());
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Trace.WriteLine(ex.Message);
+                    }
+                } 
+
+
             await Task.Delay((int)System.TimeSpan.FromSeconds(1).TotalMilliseconds, stoppingToken); // aguarda 5 segundos
+    */
         }
     }
 }
