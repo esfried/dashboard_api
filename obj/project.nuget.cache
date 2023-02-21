@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q4PVbzcE0aVZbhXWa9y1FRXGTblVR4B9oC0fxpVifh7umz4g9Zn80KLBV7IVhOg2spnOks4+4YjF+ZPqlmyszg==",
+  "dgSpecHash": "yBD1vcS6XFV6wX1SqmS202oP9ilyHZyFoVJ9OhEx+UdZbh4UPug6gME7I8AnwQKBT7fqNz+119BSjbChuhUBew==",
   "success": true,
   "projectFilePath": "/Users/edsonjosefriedmann/Projects/GPT Samples/SimpleDashboard/Api/SimpleDashboard.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.authorization/2.2.0/microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.authorization.policy/2.2.0/microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.connections.abstractions/2.2.0/microsoft.aspnetcore.connections.abstractions.2.2.0.nupkg.sha512",
+    "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.cors/2.2.0/microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.hosting.abstractions/2.2.0/microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.hosting.server.abstractions/2.2.0/microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.http/2.2.0/microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
@@ -17,7 +18,7 @@
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.http.connections.common/1.1.0/microsoft.aspnetcore.http.connections.common.1.1.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.http.extensions/2.2.0/microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
-    "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.openapi/7.0.2/microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
+    "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.openapi/7.0.3/microsoft.aspnetcore.openapi.7.0.3.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.11/microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.routing/2.2.0/microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",
     "/Users/edsonjosefriedmann/.nuget/packages/microsoft.aspnetcore.routing.abstractions/2.2.0/microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512",

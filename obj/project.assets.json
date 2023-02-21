@@ -84,6 +84,26 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Cors/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Hosting.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -232,7 +252,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/7.0.2": {
+      "Microsoft.AspNetCore.OpenApi/7.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
@@ -3711,6 +3731,19 @@
         "microsoft.aspnetcore.connections.abstractions.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.Cors/2.2.0": {
+      "sha512": "LFlTM3ThS3ZCILuKnjy8HyK9/IlDh3opogdbCVx6tMGyDzTQBgMPXLjGDLtMk5QmLDCcP3l1TO3z/+1viA8GUg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cors/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cors.xml",
+        "microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.cors.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Hosting.Abstractions/2.2.0": {
       "sha512": "ubycklv+ZY7Kutdwuy1W4upWcZ6VFR8WUXU7l7B2+mvbDBBPAcfpi+E+Y5GFe+Q157YfA3C49D2GCjAZc7Mobw==",
       "type": "package",
@@ -3817,10 +3850,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/7.0.2": {
-      "sha512": "oK0ZRloonE/WDAjHniF2gTbSsTUk5Z26RGN/o6MSlOnrnN12lDMBgpP1o9QbByBLCIRwT/KYvgYeBrYSe/NFnw==",
+    "Microsoft.AspNetCore.OpenApi/7.0.3": {
+      "sha512": "nihfseI7Jpaogc5bPAbta17sFzhyXwwC74xAhOyc6cgqriJQ2eB4TcJsAi4NePT2q+pFfEAtSCgPXw4IdJOF0w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/7.0.2",
+      "path": "microsoft.aspnetcore.openapi/7.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3828,7 +3861,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.7.0.3.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -10246,7 +10279,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Microsoft.AspNetCore.OpenApi >= 7.0.2",
+      "Microsoft.AspNetCore.Cors >= 2.2.0",
+      "Microsoft.AspNetCore.OpenApi >= 7.0.3",
       "Microsoft.AspNetCore.SignalR >= 1.1.0",
       "Microsoft.AspNetCore.SignalR.Core >= 1.1.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
@@ -10291,9 +10325,13 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Cors": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[7.0.2, )"
+            "version": "[7.0.3, )"
           },
           "Microsoft.AspNetCore.SignalR": {
             "target": "Package",
